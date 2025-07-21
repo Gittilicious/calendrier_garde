@@ -1,1 +1,31 @@
+<h2>Configuration de la garde habituelle</h2>
+
+<div class="config-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Jour</th>
+        <th colspan="4">Semaine paire</th>
+        <th colspan="4">Semaine impaire</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th>Matin</th><th>Après-midi</th><th>Soirée</th><th>Nuit</th>
+        <th>Matin</th><th>Après-midi</th><th>Soirée</th><th>Nuit</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'].map(day => `
+        <tr>
+          <td>${day}</td>
+          ${['pair','impair'].map(type =>
+            ['matin','apresmidi','soiree','nuit'].map(part => `
+              <td class="segment-cell" data-jour="${day}" data-type="${type}" data-part="${part}">–</td>
+            `).join('')
+          ).join('')}
+        </tr>
+      `).join('')}
+    </tbody>
+  </table>
+</div>
 
