@@ -143,3 +143,16 @@ if (location.hash === '#planning') {
     generateMonthPreview();
   }, 100);
 }
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('segment-cell')) {
+    e.target.classList.toggle('active');
+    e.target.textContent = e.target.classList.contains('active') ? '✓' : '–';
+
+    // Optionnel : tu peux stocker les valeurs dans localStorage ici
+    const day = e.target.dataset.jour;
+    const weekType = e.target.dataset.type;
+    const part = e.target.dataset.part;
+    const isActive = e.target.classList.contains('active');
+    // Exemple : localStorage.setItem(`garde-${weekType}-${day}-${part}`, isActive);
+  }
+});
