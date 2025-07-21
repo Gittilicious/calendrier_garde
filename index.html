@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <title>Calendrier de Garde</title>
+</head>
+<body>
+  <nav class="navbar">
+    <button onclick="navigate('planning')">🏠 Planning</button>
+    <button onclick="navigate('agenda')">📅 Agenda</button>
+    <button onclick="navigate('echanges')">🔄 Échanges</button>
+    <button onclick="navigate('stats')">📊 Statistiques</button>
+    <button onclick="navigate('settings')">⚙️ Réglages</button>
+  </nav>
+
+  <main>
+    <section id="planning" class="tab active">Planning théorique</section>
+    <section id="agenda" class="tab">Agenda réel</section>
+    <section id="echanges" class="tab">Échanges / Commentaires</section>
+    <section id="stats" class="tab">Statistiques</section>
+    <section id="settings" class="tab">Réglages</section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
