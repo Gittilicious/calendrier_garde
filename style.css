@@ -122,3 +122,25 @@ body {
   color: #a31a3a;
 }
 
+.config-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  font-size: 0.9em;
+}
+
+.config-container th, .config-container td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+}
+
+.segment-cell {
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.segment-cell.active {
+  background-color: #a3d9a5;
+  font-weight: bold;
+}
